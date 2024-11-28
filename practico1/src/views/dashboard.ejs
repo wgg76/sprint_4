@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard de Superhéroes</title>
+    <link rel="stylesheet" href="/styles.css">
+    
+  </head>
+  <body>
+    <header>
+      <h1>Superhéroes</h1>
+    </header>
+
+    <main>
+     
+      <!-- Botón de Agregar -->
+      
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Nombre Real</th>
+            <th>Edad</th>
+            <th>Planeta Origen</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% superheroes.forEach(function(superheroe) { %>
+          <tr>
+            <td><%= superheroe.nombreSuperHeroe %></td>
+            <td><%= superheroe.nombreReal %></td>
+            <td><%= superheroe.edad %></td>
+            <td><%= superheroe.planetaOrigen %></td>
+            <td>
+              
+
+              <form action="/heroes/<%= superheroe._id %>/editar" method="GET" style="display: inline;">
+                <button type="submit" style="background-color: #007bff; color: white; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer;">
+                    Editar
+                </button>
+              </form>
+              <!-- Botón de Eliminar -->
+    <form action="/api/heroes/delete/<%= superheroe._id %>?_method=DELETE" method="POST" style="display: inline;">
+      <button type="submit" style="background-color: #dc3545; color: white; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer;">
+          Eliminar
+      </button>
+  </form>
+            
+            </td>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </main>
+  </body>
+</html>

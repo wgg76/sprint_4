@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+form {
+    width: 50%; /* O ajusta el ancho según prefieras */
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input[type="text"], input[type="number"], input[type="submit"], button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+div[type="submit"] {
+    color: red;
+}
+
+.cancelar button {
+    padding: 10px 20px;       /* Tamaño interno del botón */
+    border: 1px solid black; /* Borde del botón */
+    background-color: red;   /* Color de fondo */
+    color: white;            /* Color del texto */
+    border-radius: 5px;      /* Bordes redondeados */
+    cursor: pointer;         /* Cambia el cursor al pasar sobre el botón */
+    width: auto; 
+    margin: 0 auto; 
+    text-align: center; 
+    display: flex;
+    }

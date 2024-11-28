@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title || 'CdMarvel - SuperHeroes' %></title> <!-- Usar un valor predeterminado si title no está definido -->
+
+    <link rel="stylesheet" href="/styles.css">
+
+    
+
+
+
+
+</head>
+<body>
+    <nav style="display: flex; justify-content: space-around; background-color: #33333394; padding: 60px;">
+        <a href="/landing" style="color: white; text-decoration: none;">Página Principal</a>
+        <a href="/dashboard" style="color: white; text-decoration: none;">Lista de Superhéroes</a>
+        <a href="/heroes/agregar" style="color: white; text-decoration: none;">Agregar Superhéroes</a>
+    </nav>
+
+    <main>
+        <%- body %> 
+    </main>
+
+    <footer style="background-color: #333; color: white; padding: 20px; text-align: center; margin-top: 20px;">
+        <p>&copy; 2024 - DcMarvel. Todos los derechos reservados.</p>
+        <p>Contacto: <a href="mailto:contacto@miempresa.com" style="color: #ffcc00;">contacto@DcMarvel</a></p>
+        <p>Teléfono: +54 (383) 268789</p>
+    </footer>
+</body>
+</html>
